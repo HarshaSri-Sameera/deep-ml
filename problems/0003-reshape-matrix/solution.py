@@ -11,7 +11,7 @@ def reshape_matrix(a: list[list[int|float]], new_shape: tuple[int, int]) -> list
         i = 0
         while(i < len(a)):
             dum = []
-            for j in range(2):
+            for j in range(new_shape[1]):
                 dum.append(a[i]) 
                 i += 1
             result.append(dum)
