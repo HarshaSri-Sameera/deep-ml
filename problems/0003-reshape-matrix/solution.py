@@ -8,13 +8,14 @@ def reshape_matrix(a: list[list[int|float]], new_shape: tuple[int, int]) -> list
         a = np.asarray(a)
         a = a.flatten()
         result = []
-        i = 0
-        while(i < len(a)):
-            dum = []
-            for j in range(new_shape[1]):
-                dum.append(a[i]) 
-                i += 1
-            result.append(dum)
-        return result
+        # i = 0
+        # while(i < len(a)):
+        #     dum = []
+        #     for j in range(new_shape[1]):
+        #         dum.append(a[i]) 
+        #         i += 1
+        #     result.append(dum)
+        result = a.reshape(new_shape[0], new_shape[1])
+        return result.tolist()
     else: 
         return []
